@@ -27,11 +27,18 @@ hist(total$steps,main="Total number of steps taken each day.",
 
 ```r
 m.1<-aggregate(steps~date,data=activity,mean)
-barplot(m.1[,2],main="Average number of steps taken each day.",
-        xlab="Days",ylab="Average number of steps")
+summary(m.1)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+```
+##       date                steps        
+##  Min.   :2012-10-02   Min.   : 0.1424  
+##  1st Qu.:2012-10-16   1st Qu.:30.6979  
+##  Median :2012-10-29   Median :37.3785  
+##  Mean   :2012-10-30   Mean   :37.3826  
+##  3rd Qu.:2012-11-16   3rd Qu.:46.1597  
+##  Max.   :2012-11-29   Max.   :73.5903
+```
 
 # Time series plot of the average number of steps taken
 
