@@ -1,0 +1,24 @@
+---
+title: "Leaflet Peer-graded Assignment"
+author: "Mate Sztipanovits"
+date: "Wednesday, April 26, 2017"
+output: html_document
+---
+
+For my Leaflet assignment I selected five out of the top seven
+chocolate consuming countries per capita. I was looking for
+top chocolate consuming nations. I cut off the top two for
+security puposes. The diameter of each circle represents 
+100000 times the amount of chocolate eaten in the country 
+that the circle is centered above in kilograms per person.
+
+```{r echo=FALSE}
+library(leaflet)
+m.data<-read.csv("per-capita-consumption-of-chocolate-in-selected-countries-in-2007.csv")
+kpp<-m.data$data
+m.data %>% 
+  leaflet() %>% 
+  addTiles() %>%
+  addCircles(weight = 1, radius = kpp * 100000)
+```
+
