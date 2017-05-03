@@ -1,0 +1,6 @@
+To run this shiny application do the following:
+1) Download the server.R and ui.R files
+2) Place them together in a folder without renaming them
+3) Open RStudio
+4) Set working directory
+5) Open both scripts in RStudio and invoke with "runApp()" at the console
